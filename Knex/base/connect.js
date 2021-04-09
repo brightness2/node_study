@@ -2,7 +2,7 @@
  * @Author: Brightness
  * @Date: 2021-04-07 09:28:03
  * @LastEditors: Brightness
- * @LastEditTime: 2021-04-07 10:03:51
+ * @LastEditTime: 2021-04-07 15:38:39
  * @Description:初始化连接
  */
 const knex = require("knex")({
