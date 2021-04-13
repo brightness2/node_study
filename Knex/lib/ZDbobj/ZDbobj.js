@@ -2,7 +2,7 @@
  * @Author: Brightness
  * @Date: 2021-04-07 15:27:23
  * @LastEditors: Brightness
- * @LastEditTime: 2021-04-13 15:14:33
+ * @LastEditTime: 2021-04-13 16:26:44
  * @Description:ZDbobj 类
  * 基于knex.js
  */
@@ -411,19 +411,24 @@ class ZDbobj {
    * @return void
    */
   _getTableKey() {
-    this._tableKey = new Promise((resolve) => {
-      this._knex.raw("desc " + this.table).then((res) => {
-        let arr = [];
-        for (let col of res[0]) {
-          if (col.Key == "PRI") {
-            let obj = {};
-            obj[col.Field] = "";
-            arr.push(col.Field);
+    return (this._tableKey = new Promise((resolve, reject) => {
+      this._knex
+        .raw("desc " + this.table)
+        .then((res) => {
+          let arr = [];
+          for (let col of res[0]) {
+            if (col.Key == "PRI") {
+              let obj = {};
+              obj[col.Field] = "";
+              arr.push(col.Field);
+            }
           }
-        }
-        resolve(arr.sort());
-      });
-    });
+          resolve(arr.sort());
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    }));
   }
 
   /**
