@@ -2,7 +2,7 @@
  * @Author: Brightness
  * @Date: 2021-04-07 15:27:23
  * @LastEditors: Brightness
- * @LastEditTime: 2021-04-13 14:46:51
+ * @LastEditTime: 2021-04-13 15:14:33
  * @Description:ZDbobj 类
  * 基于knex.js
  */
@@ -519,7 +519,7 @@ class ZDbobj {
    * @returns
    */
   _whereLike(field, value) {
-    this._builder.where(field, "like ", "%" + value + "%");
+    this._builder.where(field, "like", "%" + value + "%");
     return this;
   }
   /**
