@@ -2,7 +2,7 @@
  * @Author: Brightness
  * @Date: 2021-04-06 11:12:27
  * @LastEditors: Brightness
- * @LastEditTime: 2021-04-06 14:39:11
+ * @LastEditTime: 2021-04-22 11:04:48
  * @Description:
 -->
 
@@ -46,3 +46,5 @@ base/template/index.js
 ## 静态资源引用
 
 需要安装 koa-static 中间件
+
+## xtemplate 使用,第二种模板引擎
