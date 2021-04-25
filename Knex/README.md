@@ -2,7 +2,7 @@
  * @Author: Brightness
  * @Date: 2021-04-07 09:18:15
  * @LastEditors: Brightness
- * @LastEditTime: 2021-04-07 15:18:56
+ * @LastEditTime: 2021-04-25 11:15:06
  * @Description:
 -->
 
@@ -31,3 +31,7 @@ base/select.js
 ## knex 事务操作
 
 base/transactions.js
+
+## 增加 bookshelf.js 的操作
+
+基于 knex 的 orm
